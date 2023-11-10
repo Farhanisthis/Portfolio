@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Poppins&display=swap');
+      </style>
+</head>
+<body> 
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1><span>F</span>arhan</h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>BCA Student</p>
+                <h1>Hi, I'm <Span>Farhan</Span><br>from India</h1>
+            </div>
+        </div>
+    </div>
+    <!-----------------------Aboout----------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="about.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>As an aspiring young professional, I am currently pursuing a Bachelor of Computer 
+                        Applications (BCA) at the Institute of Innovation in Technology and Management College. I 
+                        am in my first year of the program and have already secured admission with a 
+                        commendable rank of 1734 in the IPU CET. My journey in the field of technology has always 
+                        been a matter of passion and curiosity, which ultimately led me to choose BCA as my path 
+                        towards a career in the IT industry.</p>
+                        <br><br>
+                        <div class="tab-tiles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links"  onclick="opentab('projects')">Projects</p>
+                            <p class="tab-links"  onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul><br>
+                                <li><span>Programming</span><br>C, Python</li>
+                                <li><span>WEb Development</span><br>HTML, CSS, JAVASCRIPT</li>
+                                <li><span>App Development</span><br>Java, Kotlin</li>
+                            </ul>
+                            </div>
+                            <div class="tab-contents" id="projects">
+                            <ul><br>
+                                <li><span>12th Grade</span><br>ATM PROJECT in Python</li>
+                                <li><span>College</span><br>Personal Portfolio Website</li>
+                            </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                            <ul><br>
+                                <li><span>High School & Senior Secondary</span><br>S. B. Mills Senior Secondary School</li>
+                                <li><span>University</span><br>Institute of Information in Technology & Management</li>
+                                <li><span>Course</span><br>Bachelor Of Computer Application<br>(1st Year)</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+    </script>
+
+
+</body>
+</html>
