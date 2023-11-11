@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b0fa959e71.js" crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Poppins&display=swap');
-      </style>
+</style>
 </head>
 <body> 
     <div id="header">
@@ -18,23 +19,24 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Chronicles</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-text">
                 <p>BCA Student</p>
-                <h1>Hi, I'm <Span>Farhan</Span><br>from India</h1>
+                <h1>Hi, I'm <span>Farhan</span><br>from India</h1>
             </div>
         </div>
     </div>
-    <!-----------------------Aboout----------------------->
+
+    <!-- About Section -->
     <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="about.png">
+                    <img src="about.png" alt="About Image">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -44,39 +46,64 @@
                         commendable rank of 1734 in the IPU CET. My journey in the field of technology has always 
                         been a matter of passion and curiosity, which ultimately led me to choose BCA as my path 
                         towards a career in the IT industry.</p>
-                        <br><br>
-                        <div class="tab-tiles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                            <p class="tab-links"  onclick="opentab('projects')">Projects</p>
-                            <p class="tab-links"  onclick="opentab('education')">Education</p>
-                        </div>
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul><br>
-                                <li><span>Programming</span><br>C, Python</li>
-                                <li><span>WEb Development</span><br>HTML, CSS, JAVASCRIPT</li>
-                                <li><span>App Development</span><br>Java, Kotlin</li>
-                            </ul>
-                            </div>
-                            <div class="tab-contents" id="projects">
-                            <ul><br>
-                                <li><span>12th Grade</span><br>ATM PROJECT in Python</li>
-                                <li><span>College</span><br>Personal Portfolio Website</li>
-                            </ul>
-                            </div>
-                            <div class="tab-contents" id="education">
-                            <ul><br>
-                                <li><span>High School & Senior Secondary</span><br>S. B. Mills Senior Secondary School</li>
-                                <li><span>University</span><br>Institute of Information in Technology & Management</li>
-                                <li><span>Course</span><br>Bachelor Of Computer Application<br>(1st Year)</li>
-                            </ul>
-                        </div>
+                    <br><br>
+                    <div class="tab-tiles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"  onclick="opentab('projects')">Projects</p>
+                        <p class="tab-links"  onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul><br>
+                            <li><span>Programming</span><br>C, Python</li>
+                            <li><span>Web Development</span><br>HTML, CSS, JAVASCRIPT</li>
+                            <li><span>Video Editing</span><br>Adobe Premiere, After Effects and Capcut.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul><br>
+                            <li><span>12th Grade</span><br>ATM PROJECT in Python</li>
+                            <li><span>College</span><br>Personal Portfolio Website</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul><br>
+                            <li><span>High School & Senior Secondary</span><br>S. B. Mills Senior Secondary School</li>
+                            <li><span>University</span><br>Institute of Information in Technology & Management</li>
+                            <li><span>Course</span><br>Bachelor Of Computer Application<br>(1st Year)</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
+    <!-- BCA Chronicle Box -->
+    <div class="section-box" id="bca-chronicle">
+        <div class="container box-content">
+            <h1 class="sub-title">BCA Chronicle</h1>
+            <div class="bca-list">
+                <div>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h2>Academic Milestones</h2>
+                    <p>Navigating the intricate path of BCA, celebrating milestones and academic achievements, each step a testament to dedication and passion for computer applications.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Coding Exploits</h2>
+                    <p>Embarking on coding exploits, from Python prowess to web development ventures, each line of code contributing to the narrative of becoming a skilled computer professional.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-arrow-up-right-dots"></i>
+                    <h2>Future Horizons</h2>
+                    <p>Peering into the future as a BCA student, with aspirations to contribute meaningfully to the world of technology, each chapter filled with excitement for what lies ahead.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------Portfolio---------------->
 
+    <!-- script -->
+    <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
         
@@ -90,10 +117,6 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
-
-
     </script>
-
-
 </body>
 </html>
